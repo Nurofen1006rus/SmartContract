@@ -233,7 +233,8 @@ contract WTRPreSale{
         // ВСЕ ОСТАЛЬНОЕ РАБОТАЕТ
         // ЭТО НЕ ЧЕКАНКА
         // НЕ РАБОТАЕТ САМ ВЫПУСК ТОКЕНОВ
-        function createTokenContract() internal returns (MintableToken)
+    }
+        function createTokenContract() internal returns (MintableToken){
             return new MintableToken();
         }
         //функция возврата может быть использована для покупки токенов
@@ -278,7 +279,7 @@ contract WTRPreSale{
   }
     
     
-}
+
 
 /**
  * @title SplitPayment
