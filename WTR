@@ -221,7 +221,7 @@ contract BurnableToken is BasicToken {
     Burn(burner, _value);
   }
 }
-contract WTRToken is  StandardToken, TokenTimelock, BurnableToken{
+contract WTRToken is  BurnableToken{
     string public constant name = "WTRToken";
     string public constant symbol = "WTR";
     uint8 public constant decimals = 4;
@@ -231,7 +231,6 @@ contract WTRToken is  StandardToken, TokenTimelock, BurnableToken{
     {
         totalSupply = 175000000 * 10 ** uint256(decimals);
         balances[msg.sender] = totalSupply;
-        Transfer(0x0, msg.sender, totalSupply);
     }
 }
 contract WTRCrowdsale is Ownable{
